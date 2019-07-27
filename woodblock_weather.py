@@ -21,7 +21,7 @@ except ImportError:
     raise
 
 # Darksky.net uses Lattitude/Longitude to get weather
-
+# Use https://www.latlong.net/ to find yours
 LOCATION = "42.5038,-92.4347"
 
 # Set up the Darksky api call
