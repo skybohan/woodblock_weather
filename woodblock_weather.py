@@ -20,17 +20,14 @@ except ImportError:
     print("WiFi secrets are kept in secrets.py, please add them there!")
     raise
 
-# Use cityname, country code where countrycode is ISO3166 format.
-# E.g. "New York, US" or "London, GB"
+# Darksky.net uses Lattitude/Longitude to get weather
+
 LOCATION = "42.5038,-92.4347"
 
-# Set up where we'll be fetching data from
+# Set up the Darksky api call
 DATA_SOURCE = "https://api.darksky.net/forecast/"
 DATA_SOURCE += secrets['darksky_token']
 DATA_SOURCE += "/" + LOCATION + "?exclude=daily,hourly,flags,alerts"
-
-# This is my test JSON it has every call from DarkSky, use this to help design your UI
-#DATA_SOURCE = 'http://cheesedoodles.net/weather.json'
 DATA_LOCATION = []
 
 
