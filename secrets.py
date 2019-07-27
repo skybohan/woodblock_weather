@@ -6,6 +6,5 @@
 secrets = {
     'ssid' : 'Add SSID here',             # Keep the two '' quotes around the name
     'password' : 'Add WiFi password here',         # Keep the two '' quotes around password
-    'timezone' : 'Add your timezone here',  # http://worldtimeapi.org/timezones
     'darksky_token' : 'Add API key here' # Requires free Dark Sky developer account from https://darksky.net/dev 
     }
