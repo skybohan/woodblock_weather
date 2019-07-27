@@ -4,6 +4,9 @@ Japanese woodblock themed weather display for PyPortal
 PyPortal project based off of the weather display code by John Park 
 https://learn.adafruit.com/pyportal-weather-station/overview
 
+Displays local time for the PyPortal, temperature, and forecast for the next hour. Information is displayed over a Japanese 
+woodblock print representing the current weather condition.
+
 This version uses data from [Dark Sky API](https://www.darksky.net), the displayed images are generated using images from
 the Library of Congress, and a font from Google Fonts.
 
