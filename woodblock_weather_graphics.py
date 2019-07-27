@@ -41,8 +41,8 @@ class Woodblock_Weather_Graphics(displayio.Group):
         
 
         self.time_text = Label(self.medium_font, max_glyphs=8)
-        self.time_text.x = 250
-        self.time_text.y = 225
+        self.time_text.x = 245
+        self.time_text.y = 25
         self.time_text.color = 0xFFFFFF
         self._text_group.append(self.time_text)
 
@@ -75,7 +75,7 @@ class Woodblock_Weather_Graphics(displayio.Group):
         else:
             self.temp_text.text = "%d °F" % temperature
 
-        description = weather['currently']['summary']
+        description = weather['minutely']['summary']
         description = description[0].upper() + description[1:]
         print(description)
         self.description_text.text = description
@@ -91,9 +91,9 @@ class Woodblock_Weather_Graphics(displayio.Group):
         if self.am_pm:
             if hour >= 12:
                 hour -= 12
-                format_str = format_str+" PM"
+                format_str = format_str+" pm"
             else:
-                format_str = format_str+" AM"
+                format_str = format_str+" am"
             if hour == 0:
                 hour = 12
         time_str = format_str % (hour, minute)
@@ -101,11 +101,6 @@ class Woodblock_Weather_Graphics(displayio.Group):
         self.time_text.text = time_str
 
     def set_icon(self, filename):
-        """The background image to a bitmap file.
-
-        :param filename: The filename of the chosen icon
-
-        """
         print("Set icon to ", filename)
         if self._icon_group:
             self._icon_group.pop()
